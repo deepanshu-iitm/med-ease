@@ -1,20 +1,22 @@
-import PatientForm from "@/components/forms/PatientForm";
+import { PatientForm } from "@/components/forms/PatientForm";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return(
     <div className="flex h-screen max-h-screen">
-      <section className="remove-scrollbar container my-auto flex justify-center">
+      <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[496px]">
-        <Image
-            src="/assets/icons/logo-full.svg"
-            height={1000}
-            width={1000}
-            alt="patient"
-            className="mb-12 h-10 w-fit"
-          />
-
+        <div className="flex items-center mb-12">
+            <Image
+              src="/assets/icons/logo-icon.svg"
+              height={40}
+              width={40}
+              alt="patient"
+              className="mr-2"
+            />
+            <h1 className="text-3xl font-bold">MedEase</h1>
+          </div>
           <PatientForm />
           
           <div className="text-14-regular mt-20 flex justify-between">
